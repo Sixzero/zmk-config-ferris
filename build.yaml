@@ -17,6 +17,6 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: ferris_rev02_left
+    shield: cradio_left
   - board: nice_nano_v2
-    shield: ferris_rev02_right
+    shield: cradio_right
