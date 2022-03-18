@@ -38,6 +38,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
+            label = "Base";
             bindings = <
                 &kp Q      &kp W      &kp E       &kp R          &kp T         &kp Y            &kp U          &kp I       &kp O      &kp P
                 &hm LGUI A &hm LALT S &hm LCTRL D &hm LSHFT F    &kp G         &kp H            &hm RSHFT J    &hm RCTRL K &hm LALT L &hm LGUI QUOT
@@ -46,40 +47,120 @@
             >;
         };
 
-        nav_layer {
-            bindings = <
-                &trans     &trans     &trans      &trans          &trans       &trans           &trans         &trans      &trans     &trans
-                &trans     &trans     &trans      &trans          &trans       &trans           &kp LARW       &kp DARW    &kp UARW   &kp RARW
-                &trans     &trans     &trans      &trans          &trans       &trans           &kp HOME       &kp PG_DN   &kp PG_UP  &kp END
-                                                  &trans          &trans       &kp ESC          &kp DEL
-            >;
-        };
+       extra_layer {
+                        label = "Mac";
+// -----------------------------------------------------------------------------------------
+// Interrup activated modkeys
+                        bindings = <
+   &kp Q      &kp W      &kp E       &kp R        &kp T        &kp Y    &kp U         &kp I        &kp O       &kp P 
+   &hm LGUI A &hm LALT S &hm LCTRL D &hm LSHIFT F &kp G        &kp H    &hm RSHIFT J  &hm RCTRL K  &hm RALT L  &hm RGUI SEMI 
+   &kp Z      &kp X      &kp C       &kp V        &kp B        &kp N    &kp M         &kp COMMA    &kp DOT     &kp FSLH 
+                                      &ltp BUTTON ESC &ltp NUM SPC  &ltp FUN TAB      &ltp NAV RET &ltp MEDIA BSPC &ltp SYM DEL
+                        >;
+                };
+                simple_layer {
+                        label = "Simple";
+// -----------------------------------------------------------------------------------------
+// same as base, but smaller times
+                        bindings = <
+   &ltg BASE BSPC &kp Q &kp W &kp E &kp R &kp T  &kp Y &kp U  &kp I     &kp O   &kp P    &kp MINUS
+   &ltg EXTRA  APOS &kp A &kp S &kp D &kp F &kp G   &kp H &kp J &kp K     &kp L   &kp SEMI &kp BSLH
+//   &ltg EXTRA APOS &crz LGUI A &crz LALT S  &crz LCTRL D &crz LSHIFT F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &kp NON_US_BSLH &kp Z &kp X &kp C &kp V  &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp MINUS
+                &ltp BUTTON ESC &ltp NUM SPC  &ltp FUN TAB     &kp RET &kp BSPC &kp RALT
+                        >;
+                };
+                button_layer {
+                        label = "Button";
+// -----------------------------------------------------------------------------------------
+// |      |     | OBT | OTOG | OUSB | BOOT |   |     |      |       |      |     |     |
+// | BTCLR| BT1 | BT2 | BT3  | BT4  | BT5  |   |     | PREV | PLAYP | NEXT | STP |     |
+// | SHFT | USB | BLE | UBT  |      |      |   |     | VDN  | MUTE  | VUP  |     |     |
+//                    | GUI  |      | SPC  |   | ENT |      | ALT   |
+                        bindings = <
+   &trans  &trans       &out OUT_BLE &out OUT_TOG &out OUT_USB &bootloader    &trans  &trans       &trans     &trans       &trans     &trans
+   &trans  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &trans  &kp C_PREV   &kp C_PP   &kp C_NEXT   &kp C_STOP &trans
+   &trans  &bt BT_CLR   &kp LALT     &kp LCTRL    &kp LSHIFT   &reset         &trans  &kp C_VOL_DN &kp C_MUTE &kp C_VOL_UP &trans     &trans
+                                     &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+//                 &rgb_ug RGB_SAI,   &rgb_ug RGB_HUI,   &kp C_VOL_UP,      &rgb_ug RGB_EFF,   &rgb_ug RGB_TOG
+                        >;
+                };
 
-        other_layer {
-            bindings = <
-                &trans     &trans     &trans      &trans          &trans       &trans           &trans         &trans      &trans     &trans
-                &trans     &trans     &trans      &trans          &trans       &trans           &trans         &trans      &trans     &trans
-                &trans     &trans     &trans      &trans          &trans       &trans           &kp HOME       &trans      &trans     &trans
-                                                  &trans          &trans       &trans           &trans
-            >;
-        };
+                num_layer {
+                        label = "Num";
+// -----------------------------------------------------------------------------------------
+// |  |   TAB  |  7  |  8  |  9  |  0  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
+// |  |  CTRL  |  4  |  5  |  6  |  0  |   |  -  |  =  |  [  |  ]  |  \  |  `   |
+// |  |  SHFT  |  1  |  2  |  3  |  0  |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+//                    | GUI |     | SPC |   | ENT |     | ALT |
+                        bindings = <
+   &trans &kp LALT   &kp N7  &kp N8   &kp N9 &kp N0      &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp BSPC
+   &trans &kp LCTRL  &kp N4  &kp N5   &kp N6 &kp GRAVE   &trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &trans
+//  &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE
+   &trans &kp LSHFT  &kp N1  &kp N2   &kp N3 &kp GRAVE   &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE
+                    	     &kp LGUI &trans &kp SPACE   &kp RET   &trans    &kp RALT
+                        >;
+                };
 
-        num_layer {
-            bindings = <
-                &kp LBKT   &kp N7     &kp N8      &kp N9          &kp RBKT      &trans          &trans         &trans      &trans     &trans
-                &kp SEMI   &kp N4     &kp N5      &kp N6          &kp EQUAL     &trans          &trans         &trans      &trans     &trans
-                &kp GRAVE  &kp N1     &kp N2      &kp N3          &kp BSLH      &trans          &trans         &trans      &trans     &trans
-                                                  &kp N0          &kp MINUS     &trans          &trans
-            >;
-        };
+               fun_layer {
+                        label = "Fun";
+// -----------------------------------------------------------------------------------------
+// |   |  SHFT  |  F9  |  F6   |  F3  |  F12  |   |    |         |               |        |  Bootloader  |   |
+// |   |  CTRL  |  F8  |  F5   |  F2  |  F11  |   |    |  GUI    |      ALT      |  CTRL  |     SHFT     |   |
+// |   |  ALT   |  F7  |  F4   |  F1  |  F10  |   |    |  PSCRN  |  PAUSE_BREAK  |  SLCK  |              |   |
+//                   |      |       |      |       |   |    |          |
+                        bindings = <
+&out OUT_USB &kp LSHFT    &kp F9   &kp F6   &kp F3   &kp F12     &trans  &trans  &trans  &trans  &trans  &trans  
+&out OUT_BLE &kp LCTRL    &kp F8   &kp F5   &kp F2   &kp F11     &trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &trans
+&out OUT_TOG &kp LALT     &kp F7   &kp F4   &kp F1   &kp F10     &trans  &kp PSCRN  &kp PAUSE_BREAK  &kp SLCK  &trans  &trans
+                             &trans   &trans   &trans      &trans  &trans  &trans
+                        >;
+                };
+                nav_layer {
+                        label = "Nav";
+// -----------------------------------------------------------------------------------------
+// |  TAB |     |     |      |      |     |   | SDN | SDN | SCUP | SCUP |     |   |
+// | CTRL | GUI | ALT | CTRL | SHFT |     |   | LFT | DWN |  UP  | RGHT |     |   |
+// | SHFT |     |     |      |      |     |   | INS | HOM | PGUP | PGDN | END |   |
+//                    | ESC  | SPCE | TAB |   | RET | BSP | DEL |
+                                           bindings = <
 
-        sym_layer {
-            bindings = <
-                &kp LBRC     &kp LS(N7)  &kp LS(N8)  &kp LS(N9) &kp RBRC       &trans &trans   &trans    &trans    &trans
-                &kp COLON     &kp LS(N4)  &kp LS(N5)  &kp LS(N6) &kp PLUS       &trans &trans   &trans    &trans    &trans
-                &kp TILDE     &kp LS(N1)  &kp LS(N2)  &kp LS(N3) &kp LS(BSLH)       &trans &trans   &trans    &trans    &trans
-                                                   &kp LS(N0) &kp UNDER   &trans &trans
-            >;
+// &bootloader &trans &trans U_NA     U_NA    U_RDO      U_PST    U_CPY   U_CUT  U_UND
+   &trans  &trans    &trans    &trans     &trans     &trans    &kp K_SCROLL_DOWN  &kp C_AC_SCROLL_DOWN  &kp C_AC_SCROLL_UP  &kp K_SCROLL_UP     &trans   &trans
+   &trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &kp LEFT           &kp DOWN              &kp UP              &kp RIGHT           &trans   &trans
+   &trans  &kp RALT  &trans    &trans     &trans     &trans    &kp HOME           &kp PG_DN             &kp PG_UP           &kp END             &kp INS  &trans
+                               &kp ESC    &kp SPACE  &kp TAB   &kp RET  &kp BSPC  &kp DEL
+                        >;
+                };
+                media_layer {
+                        label = "Media";
+// -----------------------------------------------------------------------------------------
+// |  ALT |     |     |      |      |     |   |     |     |      |      |     |   |
+// | CTRL | GUI | ALT | CTRL | SHFT |     |   | LFT | DWN |  UP  | RGHT |     |   |
+// | SHFT |     |     |      |      |     |   | INS | HOM | PGUP | PGDN | END |   |
+//                    | ESC  | SPCE | TAB |   | RET | BSP | DEL |
+                                           bindings = <
+// &bootloader &trans &trans U_NA     U_NA    U_RDO      U_PST    U_CPY   U_CUT  U_UND
+   &kp LALT   &trans    &trans    &trans     &trans     &trans    &trans  U_BTN1  U_BTN2  U_BTN3  &trans  &trans
+   &kp LCTRL  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    U_MS_L  U_MS_D  U_MS_U  U_MS_R  &trans  &trans
+   &kp LSHFT  &kp RALT  &trans    &trans     &trans     &trans    U_WH_L  U_WH_D  U_WH_U  U_WH_R  &trans  &trans
+                               &kp ESC    &kp SPACE  &kp TAB   &kp RET  &kp BSPC  &kp DEL
+                       >;
+                };
+                sym_layer {
+                        label = "Sym";
+// -----------------------------------------------------------------------------------------
+// |  ALT |  ,  |  /  |  *  |  -  |  +  |   | "|" |  ~  |  `  |  0  |  Ü  |  Ó  |
+// | CTRL |  ^  |  &  |  *  |  (  |  )  |   |  -  |  =  |  <  |  >  | [Ő  | ]Ú  |
+// | SHFT |  !  |  @  |  #  |  $  |  %  |   |  _  |  +  |  {  |  }  |  Ő  |  Ű  |
+//                    | ESC | SPC | TAB |   | RET | BSP | DEL |
+                        bindings = <
+   &kp LALT  &kp KP_COMMA   &kp KP_SLASH   &kp KP_ASTERISK       &kp KP_SUBTRACT  &kp KP_PLUS    &kp PIPE  &kp TILDE         &kp GRAVE     &kp N0       &kp MINUS     &kp EQUAL
+   &kp LCTRL &hm LGUI CARET &hm LALT AMPS  &hm LCTRL KP_MULTIPLY &hm LSHIFT LPAR  &kp RPAR       &kp MINUS &hm RSHIFT EQUAL  &hm RCTRL GT  &hm RALT LT  &hm RGUI LBKT &kp RBKT
+   &kp LSHFT &kp EXCL       &kp AT         &kp HASH              &kp DLLR         &kp PRCNT      &kp UNDER &kp PLUS          &kp LBRC      &kp RBRC     &kp LBKT      &kp BSLH
+                    	        &kp ESC    &kp SPACE  &kp TAB   &kp RET  &kp BSPC  &kp DEL
+                        >;
+                };
         };
     };
 };
