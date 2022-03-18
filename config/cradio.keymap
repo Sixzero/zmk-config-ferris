@@ -26,39 +26,40 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
+        hsp: homerow_crazymode {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_HOTKEY";
+            #binding-cells = <2>;
+            tapping_term_ms = <200>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
+        crz: homerow_crazymode {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_CRAZY";
+            #binding-cells = <2>;
+            tapping_term_ms = <200>;
+            flavor = "hold-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+        ltg: layer_toggler {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TOGGLER";
+            #binding-cells = <2>;
+            tapping_term_ms = <1200>;
+            flavor = "tap-preferred";
+            bindings = <&to>, <&kp>;
+        };
+        ltp: layer_tapper {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAPPER";
+            #binding-cells = <2>;
+            tapping_term_ms = <200>;
+            flavor = "balanced";
+            bindings = <&mo>, <&kp>;
+        };
     };
-    hsp: homerow_crazymode {
-      compatible = "zmk,behavior-hold-tap";
-      label = "HOMEROW_HOTKEY";
-      #binding-cells = <2>;
-      tapping_term_ms = <200>;
-      flavor = "balanced";
-      bindings = <&kp>, <&kp>;
-    };
-    crz: homerow_crazymode {
-      compatible = "zmk,behavior-hold-tap";
-      label = "HOMEROW_CRAZY";
-      #binding-cells = <2>;
-      tapping_term_ms = <200>;
-      flavor = "hold-preferred";
-      bindings = <&kp>, <&kp>;
-    };
-    ltg: layer_toggler {
-      compatible = "zmk,behavior-hold-tap";
-      label = "LAYER_TOGGLER";
-      #binding-cells = <2>;
-      tapping_term_ms = <1200>;
-      flavor = "tap-preferred";
-      bindings = <&to>, <&kp>;
-    };
-    ltp: layer_tapper {
-      compatible = "zmk,behavior-hold-tap";
-      label = "LAYER_TAPPER";
-      #binding-cells = <2>;
-      tapping_term_ms = <200>;
-      flavor = "balanced";
-      bindings = <&mo>, <&kp>;
-    };
+    
     keymap {
         compatible = "zmk,keymap";
 
@@ -67,7 +68,7 @@
                 &kp Q      &kp W      &kp E       &kp R          &kp T         &kp Y            &kp U          &kp I       &kp O      &kp P
                 &hm LGUI A &hm LALT S &hm LCTRL D &hm LSHFT F    &kp G         &kp H            &hm RSHFT J    &hm RCTRL K &hm LALT L &hm LGUI QUOT
                 &kp Z      &kp X      &kp C       &kp V          &kp B         &kp N            &kp M          &kp COMMA   &kp DOT    &kp FSLH
-                                                  &lt NAV_L TAB  &kp ENTER     &lt NUM_L SPACE  &lt SYM_L BKSP
+                                                  &lt NAV_L SPACE  &kp TAB     &lt NUM_L ENTER  &lt SYM_L BKSP
             >;
         };
 
