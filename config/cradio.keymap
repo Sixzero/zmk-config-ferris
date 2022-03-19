@@ -91,9 +91,9 @@
                                            bindings = <
 
 // &bootloader &trans &trans U_NA     U_NA    U_RDO       U_PST    U_CPY   U_CUT  U_UND
-   &trans    U_WH_L    U_WH_D          U_WH_U     U_WH_R     &trans     &trans      &trans  &trans     &ESC
-   &kp LGUI  &kp LALT  &kp LCTRL       &kp LSHFT  &trans     &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT  &DEL
-   &trans  &kp PSCRN  &kp PAUSE_BREAK  &kp SLCK   &kp HOME   &kp PG_DN  &kp PG_UP  &kp END         &BSPC
+   &trans    U_WH_L    U_WH_D          U_WH_U     U_WH_R     &trans     &trans      &trans  &trans     &kp ESC
+   &kp LGUI  &kp LALT  &kp LCTRL       &kp LSHFT  &trans     &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT  &kp DEL
+   &trans  &kp PSCRN  &kp PAUSE_BREAK  &kp SLCK   &kp HOME   &kp PG_DN  &kp PG_UP  &kp END         &kp BSPC
                                   &kp SPACE  &kp TAB    &kp RET  &kp BSPC
                         >;
                 };
