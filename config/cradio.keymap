@@ -15,7 +15,7 @@
 
 #define BASE   0
 #define EXTRA  1
-#define CRAZY  2
+#define SIMPLE  2
 #define BUTTON 3
 #define NUM    4
 #define FUN    5
@@ -32,7 +32,7 @@
         default_layer {
             label = "Base";
             bindings = <
-                &kp Q          &ltg CRAZY W  &kp E       &kp R           &kp T          &kp Y            &kp U          &kp I       &kp O      &kp P
+                &kp Q          &ltg SIMPLE W  &kp E       &kp R           &kp T          &kp Y            &kp U          &kp I       &kp O      &kp P
                 &hm LGUI A     &hm LALT S    &hm LCTRL D &hm LSHFT F     &kp G          &kp H            &hm RSHFT J    &hm RCTRL K &hm RALT L &hm RGUI QUOT
                 &ltp BUTTON Z  &kp X         &kp C       &kp V           &kp B          &kp N            &kp M          &kp COMMA   &kp DOT    &ltp BUTTON FSLH
                                                          &ltp NUM SPACE  &ltp FUN TAB   &ltp NAV ENTER   &ltp SYM BKSP
@@ -44,10 +44,10 @@
 // -----------------------------------------------------------------------------------------
 // Interrup activated modkeys
                         bindings = <
-   &ltg BASE Q     &kp W      &kp E       &kp R        &kp T          &kp Y    &kp U         &kp I        &kp O       &kp P 
-   &hm LGUI A      &hm LALT S &hm LCTRL D &hm LSHIFT F &kp G          &kp H    &hm RSHIFT J  &hm RCTRL K  &hm RALT L  &hm RGUI SEMI 
-   &ltp BUTTON Z   &kp X      &kp C       &kp V        &kp B          &kp N    &kp M         &kp COMMA    &kp DOT     &ltp BUTTON FSLH 
-                                          &ltp NUM SPC  &ltp FUN TAB  &ltp NAV RET &ltp SYM BSPC
+   &ltg BASE Q     &kp W      &kp E       &kp R         &kp T          &kp Y        &kp U          &kp I        &kp O       &kp P 
+   &hm LGUI A      &hm LALT S &hm LCTRL D &hm LSHIFT F  &kp G          &kp H        &hm RSHIFT J   &hm RCTRL K  &hm RALT L  &hm RGUI SEMI 
+   &ltp BUTTON Z   &kp X      &kp C       &kp V         &kp B          &kp N        &kp M          &kp COMMA    &kp DOT     &ltp BUTTON FSLH 
+                                          &ltp NUM SPC  &ltp FUN TAB   &ltp NAV RET &ltp SYM BSPC
                         >;
                 };
                 simple_layer {
@@ -55,11 +55,10 @@
 // -----------------------------------------------------------------------------------------
 // same as base, but smaller times
                         bindings = <
-   &ltg BASE Q         &kp W  &kp E  &kp R  &kp T   &kp Y  &kp U  &kp I      &kp O    &kp P
-   &ltg EXTRA A        &kp S  &kp D  &kp F  &kp G   &kp H  &kp J  &kp K      &kp L    &kp SEMI
-//   &ltg EXTRA APOS &crz LGUI A &crz LALT S  &crz LCTRL D &crz LSHIFT F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI
-   &ltg NON_US_BSLH Z  &kp X  &kp C  &kp V  &kp B   &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH
-                       &ltp NUM SPC  &ltp FUN TAB   &kp RET &kp BSPC
+   &ltg BASE Q         &ltg EXTRA  W  &kp E  &kp R  &kp T   &kp Y  &kp U  &kp I      &kp O    &kp P
+   &kp  A              &kp S          &kp D  &kp F  &kp G   &kp H  &kp J  &kp K      &kp L    &kp SEMI
+   &ltg NON_US_BSLH Z  &kp X          &kp C  &kp V  &kp B   &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH
+                               &ltp NUM SPC  &ltp FUN TAB   &kp RET &kp BSPC
                         >;
                 };
                 button_layer {
@@ -117,10 +116,10 @@
 //                    | ESC  | SPCE | TAB |   | RET | BSP | DEL |
                                            bindings = <
 
-// &bootloader &trans &trans U_NA     U_NA    U_RDO     U_PST    U_CPY   U_CUT  U_UND
-   &trans    U_WH_L    U_WH_D     U_WH_U     U_WH_R     &trans     &trans  &trans  &trans     &ESC
-   &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans     &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT  &DEL
-   &trans  &kp PSCRN  &kp PAUSE_BREAK  &kp SLCK &kp HOME  &kp PG_DN  &kp PG_UP  &kp END         &BSPC
+// &bootloader &trans &trans U_NA     U_NA    U_RDO       U_PST    U_CPY   U_CUT  U_UND
+   &trans    U_WH_L    U_WH_D          U_WH_U     U_WH_R     &trans     &trans      &trans  &trans     &ESC
+   &kp LGUI  &kp LALT  &kp LCTRL       &kp LSHFT  &trans     &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT  &DEL
+   &trans  &kp PSCRN  &kp PAUSE_BREAK  &kp SLCK   &kp HOME   &kp PG_DN  &kp PG_UP  &kp END         &BSPC
                                   &kp SPACE  &kp TAB    &kp RET  &kp BSPC
                         >;
                 };
@@ -138,7 +137,6 @@
    &kp EXCL       &kp AT         &kp HASH              &kp DLLR         &kp PRCNT      &kp PLUS          &kp LBRC      &kp RBRC     &kp LBKT       &kp BSLH
                     	                               &kp SPACE        &kp TAB        &kp RET           &kp BSPC
                         >;
-                };
         };
     };
 };
