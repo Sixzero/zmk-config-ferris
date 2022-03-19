@@ -20,9 +20,7 @@
 #define NUM    4
 #define FUN    5
 #define NAV    6
-#define MEDIA  7
-#define SYM    8
-#define MOUSE  9
+#define SYM    7
 
 / {
     
