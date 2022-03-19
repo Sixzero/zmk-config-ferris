@@ -35,7 +35,7 @@
                 &kp Q          &ltg SIMPLE W  &kp E       &kp R           &kp T          &kp Y            &kp U          &kp I       &kp O      &kp P
                 &hm LGUI A     &hm LALT S    &hm LCTRL D &hm LSHFT F     &kp G          &kp H            &hm RSHFT J    &hm RCTRL K &hm RALT L &hm RGUI QUOT
                 &ltp BUTTON Z  &kp X         &kp C       &kp V           &kp B          &kp N            &kp M          &kp COMMA   &kp DOT    &ltp BUTTON FSLH
-                                                         &ltp NUM SPACE  &ltp FUN TAB   &ltp NAV ENTER   &ltp SYM BKSP
+                                                         &ltp NUM SPACE  &ltp FUN TAB   &ltp NAV ENTER   &ltp SYM BSPC
             >;
         };
 
@@ -137,7 +137,7 @@
    &kp EXCL       &kp AT         &kp HASH              &kp DLLR         &kp PRCNT      &kp PLUS          &kp LBRC      &kp RBRC     &kp LBKT       &kp BSLH
                     	                               &kp SPACE        &kp TAB        &kp RET           &kp BSPC
                         >;
-        };
+                };
     };
 };
 
