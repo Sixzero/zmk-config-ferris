@@ -46,15 +46,6 @@
             >;
         };
 
-        nav_layer {
-            bindings = <
-                &trans     &trans     &trans      &trans          &trans       &trans           &trans         &trans      &trans     &trans
-                &trans     &trans     &trans      &trans          &trans       &trans           &kp LARW       &kp DARW    &kp UARW   &kp RARW
-                &trans     &trans     &trans      &trans          &trans       &trans           &kp HOME       &kp PG_DN   &kp PG_UP  &kp END
-                                                  &trans          &trans       &kp ESC          &kp DEL
-            >;
-        };
-
         other_layer {
             bindings = <
                 &trans     &trans     &trans      &trans          &trans       &trans           &trans         &trans      &trans     &trans
@@ -63,15 +54,23 @@
                                                   &trans          &trans       &trans           &trans
             >;
         };
-
-        num_layer {
+        other_layer_ {
             bindings = <
-                &kp LBKT   &kp N7     &kp N8      &kp N9          &kp RBKT      &trans          &trans         &trans      &trans     &trans
-                &kp SEMI   &kp N4     &kp N5      &kp N6          &kp EQUAL     &trans          &trans         &trans      &trans     &trans
-                &kp GRAVE  &kp N1     &kp N2      &kp N3          &kp BSLH      &trans          &trans         &trans      &trans     &trans
-                                                  &kp N0          &kp MINUS     &trans          &trans
+                &trans     &trans     &trans      &trans          &trans       &trans           &trans         &trans      &trans     &trans
+                &trans     &trans     &trans      &trans          &trans       &trans           &trans         &trans      &trans     &trans
+                &trans     &trans     &trans      &trans          &trans       &trans           &kp HOME       &trans      &trans     &trans
+                                                  &trans          &trans       &trans           &trans
             >;
         };
+        other_layer__ {
+            bindings = <
+                &trans     &trans     &trans      &trans          &trans       &trans           &trans         &trans      &trans     &trans
+                &trans     &trans     &trans      &trans          &trans       &trans           &trans         &trans      &trans     &trans
+                &trans     &trans     &trans      &trans          &trans       &trans           &kp HOME       &trans      &trans     &trans
+                                                  &trans          &trans       &trans           &trans
+            >;
+        };
+
 
         sym_layer {
             bindings = <
@@ -90,10 +89,10 @@
 // |  SHFT  |  1  |  2  |  3  |  0  |   |  _  |  +  |  {  |  }  | "|" |
 //                      |     | SPC |   | ENT | DEL |
                         bindings = <
-   &kp LALT   &kp N7  &kp N8   &kp N9 &kp N0      &kp N6     &kp N7    &kp N8    &kp N9    &kp N0
+   &kp LALT   &kp N7  &kp N8   &kp N9 &kp N0      &kp N6     &kp N7     &kp N8     &kp N9    &kp N0
    &kp LCTRL  &kp N4  &kp N5   &kp N6 &kp ESC     &kp TILDE  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
 //  &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE
-   &kp LSHFT  &kp N1  &kp N2   &kp N3 &kp GRAVE   &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE
+   &kp LSHFT  &kp N1  &kp N2   &kp N3 &kp GRAVE   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE
                     	       &trans &kp SPACE   &kp RET   &kp DEL
                         >;
                 };
