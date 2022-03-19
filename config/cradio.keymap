@@ -81,6 +81,68 @@
                                                    &kp LS(N0) &kp UNDER   &trans &trans
             >;
         };
+        
+                num_layer {
+                        label = "Num";
+// -----------------------------------------------------------------------------------------
+// |   TAB  |  7  |  8  |  9  |  0  |   |  6  |  7  |  8  |  9  |  0  |
+// |  CTRL  |  4  |  5  |  6  |  0  |   |  -  |  =  |  [  |  ]  |  \  |
+// |  SHFT  |  1  |  2  |  3  |  0  |   |  _  |  +  |  {  |  }  | "|" |
+//                      |     | SPC |   | ENT | DEL |
+                        bindings = <
+   &kp LALT   &kp N7  &kp N8   &kp N9 &kp N0      &kp N6     &kp N7    &kp N8    &kp N9    &kp N0
+   &kp LCTRL  &kp N4  &kp N5   &kp N6 &kp ESC     &kp TILDE  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+//  &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE
+   &kp LSHFT  &kp N1  &kp N2   &kp N3 &kp GRAVE   &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE
+                    	       &trans &kp SPACE   &kp RET   &kp DEL
+                        >;
+                };
+
+               fun_layer {
+                        label = "Fun";
+// -----------------------------------------------------------------------------------------
+// |   |  SHFT  |  F9  |  F6   |  F3  |  F12  |   |    |         |               |        |  Bootloader  |   |
+// |   |  CTRL  |  F8  |  F5   |  F2  |  F11  |   |    |  GUI    |      ALT      |  CTRL  |     SHFT     |   |
+// |   |  ALT   |  F7  |  F4   |  F1  |  F10  |   |    |  PSCRN  |  PAUSE_BREAK  |  SLCK  |              |   |
+//                   |      |       |      |       |   |    |          |
+                        bindings = <
+   &kp LSHFT    &kp F9   &kp F6   &kp F3   &kp F12     &trans     U_BTN1     U_BTN2   U_BTN3  &trans  
+   &kp LCTRL    &kp F8   &kp F5   &kp F2   &kp F11     &trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+   &kp LALT     &kp F7   &kp F4   &kp F1   &kp F10     U_MS_L     U_MS_D     U_MS_U   U_MS_R  &trans
+                                  &trans   &trans      &trans  &trans
+                        >;
+                };
+                nav_layer {
+                        label = "Nav";
+// -----------------------------------------------------------------------------------------
+// |  TAB |     |     |      |      |     |   | SDN | SDN | SCUP | SCUP |     |   |
+// | CTRL | GUI | ALT | CTRL | SHFT |     |   | LFT | DWN |  UP  | RGHT |     |   |
+// | SHFT |     |     |      |      |     |   | INS | HOM | PGUP | PGDN | END |   |
+//                    | ESC  | SPCE | TAB |   | RET | BSP | DEL |
+                                           bindings = <
+
+// &bootloader &trans &trans U_NA     U_NA    U_RDO       U_PST    U_CPY   U_CUT  U_UND
+   &trans    U_WH_L    U_WH_D          U_WH_U     U_WH_R     &trans     &trans      &trans  &trans     &ESC
+   &kp LGUI  &kp LALT  &kp LCTRL       &kp LSHFT  &trans     &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT  &DEL
+   &trans  &kp PSCRN  &kp PAUSE_BREAK  &kp SLCK   &kp HOME   &kp PG_DN  &kp PG_UP  &kp END         &BSPC
+                                  &kp SPACE  &kp TAB    &kp RET  &kp BSPC
+                        >;
+                };
+                sym_layer {
+                        label = "Sym";
+// -----------------------------------------------------------------------------------------
+// |  ,  |  /  |  *  |  -  |  +  |   |  ~  |  `  |  0  |  Ü  |  Ó  |
+// |  ^  |  &  |  *  |  (  |  )  |   |  =  |  <  |  >  | [Ő  | ]Ú  |
+// |  !  |  @  |  #  |  $  |  %  |   |  +  |  {  |  }  |  Ő  |  Ű  |
+//                    | ESC | SPC | TAB |   | RET | BSP | DEL |
+                        bindings = <
+// &kp PIPE ==? altgr + W;  kp KP_SUBTRACT ==? &kp MINUS; &kp UNDER ==? SHIFT + MINUS        
+   &kp KP_COMMA   &kp KP_SLASH   &kp KP_ASTERISK       &kp KP_SUBTRACT  &kp KP_PLUS    &kp TILDE         &kp GRAVE     &kp N0       &kp MINUS      &kp EQUAL
+   &hm LGUI CARET &hm LALT AMPS  &hm LCTRL KP_MULTIPLY &hm LSHIFT LPAR  &kp RPAR       &hm RSHIFT EQUAL  &hm RCTRL GT  &hm RALT LT  &hm RGUI LBKT  &kp RBKT
+   &kp EXCL       &kp AT         &kp HASH              &kp DLLR         &kp PRCNT      &kp PLUS          &kp LBRC      &kp RBRC     &kp LBKT       &kp BSLH
+                    	                               &kp SPACE        &kp TAB        &kp RET           &kp BSPC
+                        >;
+                };
     };
 };
 
