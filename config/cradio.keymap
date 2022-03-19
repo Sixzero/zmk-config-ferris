@@ -32,10 +32,10 @@
         default_layer {
             label = "Base";
             bindings = <
-                &kp Q          &ltg SIMPLE W  &kp E       &kp R           &kp T          &kp Y            &kp U          &kp I       &kp O      &kp P
-                &hm LGUI A     &hm LALT S    &hm LCTRL D &hm LSHFT F     &kp G          &kp H            &hm RSHFT J    &hm RCTRL K &hm RALT L &hm RGUI QUOT
-                &ltp BUTTON Z  &kp X         &kp C       &kp V           &kp B          &kp N            &kp M          &kp COMMA   &kp DOT    &ltp BUTTON FSLH
-                                                         &ltp NUM SPACE  &ltp FUN TAB   &ltp NAV ENTER   &ltp SYM BSPC
+   &kp Q          &ltg SIMPLE W  &kp E       &kp R           &kp T         &kp Y            &kp U          &kp I       &kp O      &kp P
+   &hm LGUI A     &hm LALT S    &hm LCTRL D &hm LSHFT F     &kp G          &kp H            &hm RSHFT J    &hm RCTRL K &hm RALT L &hm RGUI QUOT
+   &ltp BUTTON Z  &kp X         &kp C       &kp V           &kp B          &kp N            &kp M          &kp COMMA   &kp DOT    &ltp BUTTON FSLH
+                                            &ltp NUM SPACE  &ltp FUN TAB   &ltp NAV ENTER   &ltp SYM BSPC
             >;
         };
 
@@ -80,9 +80,9 @@
                 num_layer {
                         label = "Num";
 // -----------------------------------------------------------------------------------------
-// |   TAB  |  7  |  8  |  9  |  0  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// |  CTRL  |  4  |  5  |  6  |  0  |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// |  SHFT  |  1  |  2  |  3  |  0  |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+// |   TAB  |  7  |  8  |  9  |  0  |   |  6  |  7  |  8  |  9  |  0  |
+// |  CTRL  |  4  |  5  |  6  |  0  |   |  -  |  =  |  [  |  ]  |  \  |
+// |  SHFT  |  1  |  2  |  3  |  0  |   |  _  |  +  |  {  |  }  | "|" |
 //                      |     | SPC |   | ENT | DEL |
                         bindings = <
    &kp LALT   &kp N7  &kp N8   &kp N9 &kp N0      &kp N6     &kp N7    &kp N8    &kp N9    &kp N0
