@@ -34,3 +34,9 @@
 #define U_WH_L &mwh SCROLL_LEFT
 #define U_WH_R &mwh SCROLL_RIGHT
 #define U_WH_U &mwh SCROLL_UP
+
+&mmv {
+  acceleration-exponent = <U_MOUSE_MOVE_EXPONENT>;
+  time-to-max-speed-ms = <U_MOUSE_MOVE_TIME>;
+  delay-ms = <U_MOUSE_MOVE_DELAY>;
+};
