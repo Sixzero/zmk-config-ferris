@@ -83,7 +83,7 @@
 //                      |     | SPC |   | ENT | DEL |
             bindings = <
    &kp LALT   &kp N7  &kp N8   &kp N9 &kp N0      &kp N6     &kp N7    &kp N8    &kp N9    &kp N0
-   &kp LCTRL  &kp N4  &kp N5   &kp N6 &kp ESC     &kp TILDE  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+   &kp LCTRL  &kp N4  &kp N5   &kp N6 &kp ESC     &kp TILDE  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI
 //  &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE
    &kp LSHFT  &kp N1  &kp N2   &kp N3 &kp GRAVE   &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE
                     	       &trans &kp SPACE   &kp RET   &kp DEL
