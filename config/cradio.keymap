@@ -142,10 +142,10 @@
 // |     |     |      |     |     |   |     |     |     |     |     |
 //                    |     |     |   |     |     |
             bindings = <    
-   &trans  &trans  &trans    &trans     &trans   &trans  &trans  &trans  &trans  &trans
-   &trans  &trans  &kp BSPC  &kp ENTER  &trans   &trans  &trans  &trans  &trans  &trans 
-   &trans  &trans  &kp DEL   &trans     &trans   &trans  &trans  &trans  &trans  &trans
-                    	     &trans     &trans   &trans  &trans
+   &trans  &trans  &kp LC(z)  &trans     &trans   &trans  &trans  &trans  &trans  &trans
+   &trans  &trans  &kp BSPC   &kp ENTER  &trans   &trans  &trans  &trans  &trans  &trans 
+   &trans  &trans  &kp DEL    &trans     &trans   &trans  &trans  &trans  &trans  &trans
+                    	      &trans     &trans   &trans  &trans
             >;
         };
     };
