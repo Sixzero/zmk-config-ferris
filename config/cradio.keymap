@@ -31,7 +31,7 @@
         default_layer {
             bindings = <
    &hm LSHFT Q    &ltg SIMPLE W  &kp E        &kp R           &kp T           &kp Y            &kp U          &kp I        &kp O         &kp P
-   &kp A          &hm LALT S     &hm LCTRL D  &hm LSHFT F     &kp G           &kp H            &hm RSHFT J    &hm RCTRL K  &hm RALT L    &kp SEMI
+   &ltp NUM A    &hm LALT S     &hm LCTRL D  &hm LSHFT F     &kp G           &kp H            &hm RSHFT J    &hm RCTRL K  &hm RALT L    &kp SEMI
    &ltp RANDOM Z  &hm LGUI X     &kp C        &kp V           &ltp BUTTON B   &ltp BUTTON N    &kp M          &kp COMMA    &hm RGUI DOT  &kp FSLH
                                               &ltp NUM SPACE  &ltp FUN TAB   &ltp NAV ENTER   &ltp SYM BSPC
             >;
@@ -43,7 +43,7 @@
 // Interrup activated modkeys
             bindings = <
    &ltg BASE Q  &kp W       &kp E        &kp R         &kp T           &kp Y          &kp U         &kp I        &kp O         &kp P 
-   &kp A        &hm LALT S  &hm LCTRL D  &hm LSHIFT F  &kp G           &kp H          &hm RSHIFT J  &hm RCTRL K  &hm RALT L    &kp SEMI 
+   &ltp NUM A   &hm LALT S  &hm LCTRL D  &hm LSHIFT F  &kp G           &kp H          &hm RSHIFT J  &hm RCTRL K  &hm RALT L    &kp SEMI 
    &kp Z        &hm LGUI X  &kp C        &kp V         &ltp BUTTON B   &ltp BUTTON N  &kp M         &kp COMMA    &hm RGUI DOT  &kp FSLH
                                          &ltp NUM SPC  &ltp FUN TAB    &ltp NAV RET &ltp SYM BSPC
             >;
@@ -90,7 +90,7 @@
    &kp LSHFT  &kp N7       &kp N8        &kp N9         &kp N0      &kp N6     &kp N7    &kp N8    &kp N9    &kp N0
    &kp LCTRL  &hm LALT N4  &hm LCTRL N5  &hm LSHIFT N6  &kp ESC     &kp TILDE  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI
    &kp LALT   &kp N1       &kp N2        &kp N3         &kp GRAVE   &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE
-                    	       &trans &kp SPACE   &kp RET    &kp DEL
+                    	   &kp LCTRL     &kp SPACE      &kp RET     &kp DEL
             >;
         };
 
