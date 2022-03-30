@@ -146,8 +146,8 @@
 // |     |     |      |     |     |   |     |     |     |     |     |
 //                    |     |     |   |     |     |
             bindings = <    
-   &trans  &trans                    &kp LC(Y)       &trans            &trans      &trans  &trans  &trans  &trans  &trans
-   &trans  &hm LALT LA(NON_US_BSLH)  &hm LCTRL BSPC  &hm LSHIFT ENTER  &trans      &trans  &trans  &trans  &trans  &trans 
+   &trans  &trans                    &kp LC(Y)       &kp RA(N8)        &kp RA(F)   &trans  &trans  &trans  &trans  &trans
+   &trans  &hm LALT LA(NON_US_BSLH)  &hm LCTRL BSPC  &hm LSHIFT ENTER  &kp RA(B)   &trans  &trans  &trans  &trans  &trans 
    &trans  &kp LC(NON_US_BSLH)       &kp DEL         &kp LEFT          &kp RIGHT   &trans  &trans  &trans  &trans  &trans
                     	                        &trans            &trans      &trans  &trans
             >;
