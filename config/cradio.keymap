@@ -37,7 +37,7 @@
             >;
         };
         simple_layer {
-            label = "YZswap";
+            label = "Simple";
 // -----------------------------------------------------------------------------------------
 // same as base, but smaller times
             bindings = <
@@ -49,7 +49,7 @@
         };
 
         extra_layer {
-            label = "Mac";
+            label = "Extra";
 // -----------------------------------------------------------------------------------------
 // Interrup activated modkeys
             bindings = <
@@ -57,17 +57,6 @@
    &ltp NUM A     &hcm LALT S  &hcm LCTRL D  &hcm LSHIFT F  &kp G           &kp H          &hcm RSHIFT J  &hcm RCTRL K  &hcm RALT L    &kp SEMI 
    &ltp RANDOM Z  &hcm LGUI X  &kp C         &kp V          &ltp BUTTON B   &ltp BUTTON N  &kp M          &kp COMMA     &hcm RGUI DOT  &kp FSLH
                                              &ltp NUM SPC   &ltp FUN TAB    &ltp NAV RET   &ltp SYM BSPC
-            >;
-        };
-        extra_layer {
-            label = "Mac";
-// -----------------------------------------------------------------------------------------
-// Interrup activated modkeys
-            bindings = <
-   &ltg BASE Q  &kp W       &kp E        &kp R         &kp T           &kp Y          &kp U         &kp I        &kp O         &kp P 
-   &ltp NUM A   &hm LALT S  &hm LCTRL D  &hm LSHIFT F  &kp G           &kp H          &hm RSHIFT J  &hm RCTRL K  &hm RALT L    &kp SEMI 
-   &kp Z        &hm LGUI X  &kp C        &kp V         &ltp BUTTON B   &ltp BUTTON N  &kp M         &kp COMMA    &hm RGUI DOT  &kp FSLH
-                                         &ltp NUM SPC  &ltp FUN TAB    &ltp NAV RET &ltp SYM BSPC
             >;
         };
         button_layer {
