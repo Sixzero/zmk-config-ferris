@@ -22,7 +22,7 @@
 #define NAV    6
 #define SYM    7
 #define RANDOM 8
-#define ARROWS 9
+#define ARROWS 8
 
 / {
     
@@ -147,21 +147,6 @@
    &kp DOT   &hm LALT LA(NON_US_BSLH)  &hm LCTRL BSPC  &hm LSHIFT ENTER  &kp RA(B)   &trans  &trans  &trans  &trans  &trans 
    &trans    &kp LC(NON_US_BSLH)       &kp DEL         &kp LEFT          &kp RIGHT   &trans  &trans  &trans  &trans  &trans
                     	                               &trans            &trans      &trans  &trans
-            >;
-        };
-        arrows {
-            label = "Arrows";
-// -----------------------------------------------------------------------------------------
-// |     |      |     |     |  P   |   |     |     |     |     |     |
-// |     |  LFT | UP  | DWN | RGHT |   |     |     |     |     |     |
-// |     |      |     |     |      |   |     |     |     |     |     |
-//                    |     |      |   |     |     |
-// LC(SHFT(P)) available. Ctrl moves.
-            bindings = <    
-   &kp LSHFT      &trans    &trans  &trans    &kp P       &trans  &trans  &trans  &trans  &trans
-   &kp CTRL       &kp LEFT  &kp UP  &kp DOWN  &kp RIGHT   &trans  &trans  &trans  &trans  &trans 
-   &trans         &trans    &trans  &trans    &trans      &trans  &trans  &trans  &trans  &trans
-                    	            &trans    &trans      &trans  &trans
             >;
         };
     };
