@@ -22,7 +22,7 @@
 #define NAV    6
 #define SYM    7
 #define RANDOM 8
-#define ARROWS 8
+#define ARROWS 9
 
 / {
     
