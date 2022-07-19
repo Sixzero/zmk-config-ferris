@@ -157,10 +157,10 @@
 // |     |     | DEL  |     |     |   |     |     |     |     |     |
 //                    |     |     |   |     |     |
             bindings = <    
-   &kp LSHFT      &trans     &trans   &trans     &trans       &trans  &trans  &trans  &trans  &trans
-   &kp CTRL       &kp LEFT   &kp UP   &kp DOWN   &kp RIGHT    &trans  &trans  &trans  &trans  &trans 
-   &kp LC(LSHFT)  &kp PG_DN  &kp END  &kp PG_UP  &kp BSPC     &trans  &trans  &trans  &trans  &trans
-                    	                &trans   &trans       &trans  &trans
+   &kp LSHFT      &trans    &trans  &trans    &trans      &trans  &trans  &trans  &trans  &trans
+   &kp CTRL       &kp LEFT  &kp UP  &kp DOWN  &kp RIGHT   &trans  &trans  &trans  &trans  &trans 
+   &kp LC(LSHFT)  &trans    &trans  &trans    &&trans     &trans  &trans  &trans  &trans  &trans
+                    	            &trans    &trans      &trans  &trans
             >;
         };
     };
