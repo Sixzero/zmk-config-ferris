@@ -146,6 +146,22 @@
                     	                               &trans            &trans      &trans  &trans
             >;
         };
+        };
+        arrows {
+            label = "Arrows";
+// -----------------------------------------------------------------------------------------
+// |     |      |     |     |  P   |   |     |     |     |     |     |
+// |     |  LFT | UP  | DWN | RGHT |   |     |     |     |     |     |
+// |     |      |     |     |      |   |     |     |     |     |     |
+//                    |     |      |   |     |     |
+// LC(SHFT(P)) available. Ctrl moves.
+            bindings = <    
+   &kp LSHFT      &trans    &trans  &trans    &kp P       &trans  &trans  &trans  &trans  &trans
+   &kp LCTRL      &kp LEFT  &kp UP  &kp DOWN  &kp RIGHT   &trans  &trans  &trans  &trans  &trans 
+   &trans         &trans    &trans  &trans    &trans      &trans  &trans  &trans  &trans  &trans
+                    	            &trans    &trans      &trans  &trans
+            >;
+        };
     };
 };
 
