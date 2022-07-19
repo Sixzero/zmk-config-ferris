@@ -44,7 +44,7 @@
             bindings = <
    &hm LSHFT Q    &ltg EXTRA W    &kp E         &kp R           &kp T           &kp Y           &kp U          &kp I         &kp O          &kp P
    &hm LCTRL A    &hfm LALT S     &hfm LCTRL D  &hfm LSHFT F    &kp G           &kp H           &hfm RSHFT J   &hfm RCTRL K  &hfm RALT L    &kp SEMI
-   &ltp RANDOM Z  &hfm LGUI X     &kp C         &ltp EXTRA2V    &ltp BUTTON B   &ltp BUTTON N   &kp M          &kp COMMA     &hfm RGUI DOT  &kp FSLH
+   &ltp RANDOM Z  &hfm LGUI X     &kp C         &ltp EXTRA2 V    &ltp BUTTON B   &ltp BUTTON N   &kp M          &kp COMMA     &hfm RGUI DOT  &kp FSLH
                                                 &ltp NUM SPACE  &ltp FUN TAB    &ltp NAV ENTER  &ltp SYM BSPC
             >;
         };
