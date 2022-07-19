@@ -158,7 +158,7 @@
             bindings = <    
    &kp LSHFT      &trans    &trans  &trans    &kp P       &trans  &trans  &trans  &trans  &trans
    &kp LCTRL      &kp LEFT  &kp UP  &kp DOWN  &kp RIGHT   &trans  &trans  &trans  &trans  &trans 
-   &kp LC(LSHFT)  &trans    &trans  &trans    &trans      &trans  &trans  &trans  &trans  &trans
+   &trans  &trans    &trans  &trans    &trans      &trans  &trans  &trans  &trans  &trans
                     	            &trans    &trans      &trans  &trans
             >;
         };
