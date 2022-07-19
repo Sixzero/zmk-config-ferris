@@ -152,10 +152,11 @@
         extra2 {
             label = "Extra2";
 // -----------------------------------------------------------------------------------------
-// |  -  |  ,  | UNDO |  (  |     |   |     |     |     |     |     |
-// |  .  |     | BSPC | RET |     |   |     |     |     |     |     |
-// |     |     | DEL  |     |     |   |     |     |     |     |     |
-//                    |     |     |   |     |     |
+// |     |      |     |     |  P   |   |     |     |     |     |     |
+// |     |  LFT | UP  | DWN | RGHT |   |     |     |     |     |     |
+// |     |      |     |     |      |   |     |     |     |     |     |
+//                    |     |      |   |     |     |
+// LC(SHFT(P)) available. Ctrl moves.
             bindings = <    
    &kp LSHFT      &trans    &trans  &trans    &kp P       &trans  &trans  &trans  &trans  &trans
    &kp CTRL       &kp LEFT  &kp UP  &kp DOWN  &kp RIGHT   &trans  &trans  &trans  &trans  &trans 
