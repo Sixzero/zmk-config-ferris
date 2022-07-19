@@ -22,7 +22,7 @@
 #define NAV    6
 #define SYM    7
 #define RANDOM 8
-#define EXTRA2 9
+#define ARROWS 9
 
 / {
     
@@ -33,7 +33,7 @@
             bindings = <
    &hm LSHFT Q    &ltg SIMPLE W  &kp E        &kp R           &kp T           &kp Y            &kp U          &kp I        &kp O         &kp P
    &hm LCTRL A    &hm LALT S     &hm LCTRL D  &hm LSHFT F     &kp G           &kp H            &hm RSHFT J    &hm RCTRL K  &hm RALT L    &kp SEMI
-   &ltp RANDOM Z  &hm LGUI X     &kp C        &ltp EXTRA2 V   &ltp BUTTON B   &ltp BUTTON N    &kp M          &kp COMMA    &hm RGUI DOT  &kp FSLH
+   &ltp RANDOM Z  &hm LGUI X     &kp C        &ltp ARROWS V   &ltp BUTTON B   &ltp BUTTON N    &kp M          &kp COMMA    &hm RGUI DOT  &kp FSLH
                                               &ltp NUM SPACE  &ltp FUN TAB    &ltp NAV ENTER   &ltp SYM BSPC
             >;
         };
@@ -44,7 +44,7 @@
             bindings = <
    &hm LSHFT Q    &ltg EXTRA W    &kp E         &kp R           &kp T           &kp Y           &kp U          &kp I         &kp O          &kp P
    &hm LCTRL A    &hfm LALT S     &hfm LCTRL D  &hfm LSHFT F    &kp G           &kp H           &hfm RSHFT J   &hfm RCTRL K  &hfm RALT L    &kp SEMI
-   &ltp RANDOM Z  &hfm LGUI X     &kp C         &ltp EXTRA2 V    &ltp BUTTON B   &ltp BUTTON N   &kp M          &kp COMMA     &hfm RGUI DOT  &kp FSLH
+   &ltp RANDOM Z  &hfm LGUI X     &kp C         &ltp ARROWS V   &ltp BUTTON B   &ltp BUTTON N   &kp M          &kp COMMA     &hfm RGUI DOT  &kp FSLH
                                                 &ltp NUM SPACE  &ltp FUN TAB    &ltp NAV ENTER  &ltp SYM BSPC
             >;
         };
@@ -56,7 +56,7 @@
             bindings = <
    &ltg BASE Q    &kp W        &kp E         &kp R          &kp T           &kp Y          &kp U          &kp I         &kp O          &kp P 
    &ltp NUM A     &hcm LALT S  &hcm LCTRL D  &hcm LSHIFT F  &kp G           &kp H          &hcm RSHIFT J  &hcm RCTRL K  &hcm RALT L    &kp SEMI 
-   &ltp RANDOM Z  &hcm LGUI X  &kp C         &ltp EXTRA2 V  &ltp BUTTON B   &ltp BUTTON N  &kp M          &kp COMMA     &hcm RGUI DOT  &kp FSLH
+   &ltp RANDOM Z  &hcm LGUI X  &kp C         &ltp ARROWS V  &ltp BUTTON B   &ltp BUTTON N  &kp M          &kp COMMA     &hcm RGUI DOT  &kp FSLH
                                              &ltp NUM SPC   &ltp FUN TAB    &ltp NAV RET   &ltp SYM BSPC
             >;
         };
@@ -149,8 +149,8 @@
                     	                               &trans            &trans      &trans  &trans
             >;
         };
-        extra2 {
-            label = "Extra2";
+        arrows {
+            label = "Arrows";
 // -----------------------------------------------------------------------------------------
 // |     |      |     |     |  P   |   |     |     |     |     |     |
 // |     |  LFT | UP  | DWN | RGHT |   |     |     |     |     |     |
