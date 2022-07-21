@@ -142,7 +142,7 @@
             bindings = <    
    &kp FSLH  &kp COMMA                 &kp LC(Y)       &kp LS(N8)        &kp RA(F)   &trans  &trans  &trans  &trans  &trans
    &kp DOT   &hm LALT LA(NON_US_BSLH)  &hm LCTRL BSPC  &hm LSHIFT ENTER  &kp RA(B)   &trans  &trans  &trans  &trans  &trans 
-   &trans    &kp LC(NON_US_BSLH)       &kp DEL         &kp LEFT          &kp RIGHT   &trans  &trans  &trans  &trans  &trans
+   &trans    &kp LC(NON_US_BSLH)       &kp DEL         &kp DOWN          &kp UP      &trans  &trans  &trans  &trans  &trans
                     	                               &trans            &trans      &trans  &trans
             >;
         };
