@@ -6,6 +6,8 @@ manifest:
       url-base: https://github.com/krikun98
     - name: ftc
       url-base: https://github.com/ftc
+    - name: nickconway
+      url-base: https://github.com/nickconway
   projects:
     - name: zmk
       remote: nickconway
