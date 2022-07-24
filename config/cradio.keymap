@@ -30,9 +30,9 @@
         compatible = "zmk,keymap";
         default_layer {
             bindings = <
-   &him LSHFT Q    &ltg SIMPLE W  &kp E        &kp R           &kp T           &kp Y            &kp U          &kp I        &kp O         &kp P
-   &hm LCTRL A     &hm LALT S     &hm LCTRL D  &him LSHFT F    &kp G           &kp H            &hm RSHFT J    &hm RCTRL K  &hm RALT L    &kp SEMI
-   &ltp RANDOM Z   &hm LGUI X     &kp C        &ltp ARROWS V   &ltp BUTTON B   &ltp BUTTON N    &kp M          &kp COMMA    &hm RGUI DOT  &kp FSLH
+   &him LSHFT Q    &ltg SIMPLE W  &kp E        &kp R            &kp T           &kp Y            &kp U          &kp I        &kp O         &kp P
+   &hm LCTRL A     &hm LALT S     &hm LCTRL D  &hmpro LSHFT F   &kp G           &kp H            &hm RSHFT J    &hm RCTRL K  &hm RALT L    &kp SEMI
+   &ltp RANDOM Z   &hm LGUI X     &kp C        &ltp ARROWS V    &ltp BUTTON B   &ltp BUTTON N    &kp M          &kp COMMA    &hm RGUI DOT  &kp FSLH
                                               &ltp NUM SPACE  &ltp FUN TAB    &ltp NAV ENTER   &ltp SYM BSPC
             >;
         };
@@ -42,7 +42,7 @@
 // same as base, but smaller times
             bindings = <
    &hm LSHFT Q    &ltg EXTRA W    &kp E         &kp R           &kp T           &kp Y           &kp U          &kp I         &kp O          &kp P
-   &hm LCTRL A    &hfm LALT S     &hfm LCTRL D  &him LSHFT F    &kp G           &kp H           &hfm RSHFT J   &hfm RCTRL K  &hfm RALT L    &kp SEMI
+   &hm LCTRL A    &hm LALT S      &hm LCTRL D   &him LSHFT F    &kp G           &kp H           &hfm RSHFT J   &hfm RCTRL K  &hfm RALT L    &kp SEMI
    &ltp RANDOM Z  &hfm LGUI X     &kp C         &ltp ARROWS V   &ltp BUTTON B   &ltp BUTTON N   &kp M          &kp COMMA     &hfm RGUI DOT  &kp FSLH
                                                 &ltp NUM SPACE  &ltp FUN TAB    &ltp NAV ENTER  &ltp SYM BSPC
             >;
@@ -235,10 +235,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LEFT_SHIFT>,
-                <&macro_press &mt LEFT_SHIFT F>, 
+                = <&macro_press &hfm LEFT_SHIFT F>, 
                 <&macro_pause_for_release>,
-                <&macro_release &mt LEFT_SHIFT F>,
                 <&macro_release &kp LEFT_SHIFT>
                 ;
         };
