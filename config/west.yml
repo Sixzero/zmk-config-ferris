@@ -8,10 +8,12 @@ manifest:
       url-base: https://github.com/ftc
     - name: nickconway
       url-base: https://github.com/nickconway
+    - name: sixzero
+      url-base: https://github.com/Sixzero
   projects:
     - name: zmk
-      remote: nickconway
-      revision: dev
+      remote: sixzero
+      revision: dev_six
       import: app/west.yml
   self:
     path: config
