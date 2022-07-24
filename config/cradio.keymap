@@ -183,6 +183,7 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
             hold-while-undecided;
+            retro-tap;
         };
         hfm: homerow_fastmode {
             compatible = "zmk,behavior-hold-tap";
