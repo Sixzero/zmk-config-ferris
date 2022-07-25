@@ -12,8 +12,8 @@ manifest:
       url-base: https://github.com/Sixzero
   projects:
     - name: zmk
-      remote: sixzero
-      revision: dev_six
+      remote: nickconway
+      revision: dev
       import: app/west.yml
   self:
     path: config
