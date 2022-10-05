@@ -23,7 +23,6 @@
 #define SYM    7
 #define RANDOM 8
 #define ARROWS 9
-#define ILLUMI 10
 
 / {
     
@@ -31,10 +30,10 @@
         compatible = "zmk,keymap";
         default_layer {
             bindings = <
-   &him LSHFT Q    &ltg SIMPLE W  &ltp ILLUMI E  &kp R            &kp T           &kp Y            &kp U          &kp I        &kp O         &kp P
-   &hm LCTRL A     &hm LALT S     &hm LCTRL D    &him LSHFT F     &kp G           &kp H            &hm RSHFT J    &hm RCTRL K  &hm RALT L    &kp SEMI
-   &ltp RANDOM Z   &hm LGUI X     &kp C          &ltp ARROWS V    &ltp BUTTON B   &ltp BUTTON N    &kp M          &kp COMMA    &hm RGUI DOT  &kp FSLH
-                                                 &ltp NUM SPACE   &ltp FUN TAB    &ltp NAV ENTER   &ltp SYM BSPC
+   &him LSHFT Q    &ltg SIMPLE W  &kp E        &kp R            &kp T           &kp Y            &kp U          &kp I        &kp O         &kp P
+   &hm LCTRL A     &hm LALT S     &hm LCTRL D  &him LSHFT F      &kp G           &kp H            &hm RSHFT J    &hm RCTRL K  &hm RALT L    &kp SEMI
+   &ltp RANDOM Z   &hm LGUI X     &kp C        &ltp ARROWS V    &ltp BUTTON B   &ltp BUTTON N    &kp M          &kp COMMA    &hm RGUI DOT  &kp FSLH
+                                              &ltp NUM SPACE  &ltp FUN TAB    &ltp NAV ENTER   &ltp SYM BSPC
             >;
         };
         simple_layer {
@@ -160,20 +159,6 @@
    &kp LCTRL      &kp LEFT  &kp UP  &kp DOWN  &kp RIGHT   &trans  &trans  &trans  &trans  &trans 
    &kp LC(LSHFT)  &trans    &trans  &trans    &trans      &trans  &trans  &trans  &trans  &trans
                     	            &trans    &trans      &trans  &trans
-            >;
-        };
-        illumi_layer {
-            label = "Illumi";
-// -----------------------------------------------------------------------------------------
-// |     |     |     |    |    |   |     |     |     |     |     |
-// |     |     |     |    |    |   |     |     |     |     |     |
-// |     |     |     |    |    |   |     |     |     |     |     |
-//                   |    |    |   |     |     |
-            bindings = <    
-   &trans  &trans     &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans
-   &trans  &kp LA(Z)  &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans 
-   &trans  &trans     &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans
-                    	      &trans  &trans   &trans  &trans
             >;
         };
     };
