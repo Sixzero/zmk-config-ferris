@@ -162,18 +162,18 @@
                     	            &trans    &trans      &trans  &trans
             >;
         };
-        illumi {
-            label = "Illuminati";
+        illumi_layer {
+            label = "Illumi";
 // -----------------------------------------------------------------------------------------
 // |     |     |     |    |    |   |     |     |     |     |     |
 // |     |     |     |    |    |   |     |     |     |     |     |
 // |     |     |     |    |    |   |     |     |     |     |     |
 //                   |    |    |   |     |     |
             bindings = <    
-   &trans  &trans     &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-   &trans  &kp LA(Z)  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans 
-   &trans  &trans     &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                    	           &trans    &trans  &trans  &trans
+   &trans  &trans     &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans
+   &trans  &kp LA(Z)  &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans 
+   &trans  &trans     &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans
+                    	      &trans  &trans   &trans  &trans
             >;
         };
     };
