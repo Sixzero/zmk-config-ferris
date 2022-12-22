@@ -112,10 +112,10 @@
 //                    | ESC  | SPCE | TAB |   | RET | BSP | DEL |
                                            bindings = <
 // &bootloader &trans &trans U_NA     U_NA    U_RDO       U_PST    U_CPY   U_CUT  U_UND
-   &trans    &trans     &trans           &trans     &trans     &zed_em_kay  &trans     &trans     &trans     &kp ESC
-   &kp LGUI  &kp LALT   &kp LCTRL        &kp LSHFT  &trans     &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT  &kp DEL
-   &trans    &kp PSCRN  &kp PAUSE_BREAK  &kp SLCK   &trans     &kp HOME     &kp PG_DN  &kp PG_UP  &kp END    &kp BSPC
-                                         &kp SPACE  &kp TAB    &kp RET      &kp BSPC
+   &trans    &trans          &trans           &trans     &trans     &zed_em_kay  &trans     &trans     &trans     &kp ESC
+   &kp LGUI  &kp LALT        &kp LCTRL        &kp LSHFT  &trans     &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT  &kp DEL
+   &trans    &hm LGUI PSCRN  &kp PAUSE_BREAK  &kp SLCK   &trans     &kp HOME     &kp PG_DN  &kp PG_UP  &kp END    &kp BSPC
+                                              &kp SPACE  &kp TAB    &kp RET      &kp BSPC
             >;
         };
         sym_layer {
