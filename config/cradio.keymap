@@ -25,158 +25,97 @@
 #define ARROWS 9
 #define ILLUMI 10
 
-/ {
-    
-    keymap {
-        compatible = "zmk,keymap";
-        default_layer {
-            bindings = <
-   &him LSHFT Q    &ltg SIMPLE W  &ltp ILLUMI E  &kp R            &kp T           &kp Y            &kp U          &kp I        &kp O         &kp P
-   &hm LCTRL A     &hm LALT S     &hm LCTRL D    &him LSHFT F     &kp G           &kp H            &hm RSHFT J    &hm RCTRL K  &hm RALT L    &kp SEMI
-   &ltp RANDOM Z   &hm LGUI X     &kp C          &ltp ARROWS V    &ltp BUTTON B   &ltp BUTTON N    &kp M          &kp COMMA    &hm RGUI DOT  &kp FSLH
-                                                 &ltp NUM SPACE   &ltp FUN TAB    &ltp NAV ENTER   &ltp SYM BSPC
-            >;
-        };
-        simple_layer {
-            label = "Simple";
-// -----------------------------------------------------------------------------------------
-// same as base, but smaller times
-            bindings = <
-   &him LSHFT Q    &ltg EXTRA W    &kp E         &kp R           &kp T           &kp Y           &kp U          &kp I         &kp O          &kp P
-   &hm LCTRL A    &hm LALT S      &him LCTRL D   &him LSHFT F    &kp G           &kp H           &hfm RSHFT J   &hfm RCTRL K  &hfm RALT L    &kp SEMI
-   &ltp RANDOM Z  &hfm LGUI X     &kp C         &ltp ARROWS V   &ltp BUTTON B   &ltp BUTTON N   &kp M          &kp COMMA     &hfm RGUI DOT  &kp FSLH
-                                                &ltp NUM SPACE  &ltp FUN TAB    &ltp NAV ENTER  &ltp SYM BSPC
-            >;
-        };
-        extra_layer {
-            label = "Extra";
-// -----------------------------------------------------------------------------------------
-// Interrup activated modkeys
-            bindings = <
-   &ltg BASE Q    &kp W        &kp E         &kp R          &kp T           &kp Y          &kp U          &kp I         &kp O          &kp P 
-   &ltp NUM A     &hcm LALT S  &hcm LCTRL D  &hfm LSHFT F   &kp G           &kp H          &hcm RSHIFT J  &hcm RCTRL K  &hcm RALT L    &kp SEMI 
-   &ltp RANDOM Z  &hcm LGUI X  &kp C         &ltp ARROWS V  &ltp BUTTON B   &ltp BUTTON N  &kp M          &kp COMMA     &hcm RGUI DOT  &kp FSLH
-                                             &ltp NUM SPC   &ltp FUN TAB    &ltp NAV RET   &ltp SYM BSPC
-            >;
-        };
-        button_layer {
-            label = "Button";
-// -----------------------------------------------------------------------------------------
-// |       | OBT | OTOG | OUSB | BOOT |   |     |      |       |      |     |
-// |  BT1  | BT2 | BT3  | BT4  | BT5  |   |     | PREV | PLAYP | NEXT | STP |
-// | BTCLR | BLE | UBT  |      | RST  |   |     | VDN  | MUTE  | VUP  |     |
-//                      |      | SPC  |   | ENT | ALT  |
-            bindings = <
-   &bt BT_CLR    &out OUT_BLE  &out OUT_TOG  &out OUT_USB  &reset         &kp C_SLOW_TRACKING  &kp C_BRI_DEC  &kp C_BRI_AUTO  &kp C_BRI_INC  &kp C_BACKLIGHT_TOGGLE     
-   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4   &kp C_FAST_FORWARD   &kp C_PREV     &kp C_PP        &kp C_NEXT     &kp C_STOP 
-   &bootloader   &kp LALT      &kp LCTRL     &kp LSHIFT    &trans         &kp C_REWIND         &kp C_VOL_DN   &kp C_MUTE      &kp C_VOL_UP   &kp C_SLOW     
-                                             &trans        &kp SPACE      &kp RET              &trans
-            >;
-        };
 
-        num_layer {
-            label = "Num";
-// -----------------------------------------------------------------------------------------
-// |  SHFT  |  7  |  8  |  9  |  0  |   |  6  |  7  |  8  |  9  |  0  |
-// |  CTRL  |  4  |  5  |  6  | ESC |   |  -  |  =  |  [  |  ]  |  \  |
-// |  ALT   |  1  |  2  |  3  |  0  |   |  _  |  +  |  {  |  }  | "|" |
-//                      |     | SPC |   | ENT | DEL |
-            bindings = <
-   &kp LSHFT  &kp N7       &kp N8        &kp N9         &kp N0      &kp N6     &kp N7    &kp N8    &kp N9    &kp N0
-   &kp LCTRL  &hm LALT N4  &hm LCTRL N5  &hm LSHIFT N6  &kp ESC     &kp TILDE  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI
-   &kp LALT   &kp N1       &kp N2        &kp N3         &kp GRAVE   &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE
-                    	                 &kp LCTRL      &kp SPACE   &kp RET    &kp DEL
-            >;
-        };
+&mt {
+  //  flavor = "tap-preferred";
+   // tapping_term_ms = <200>;
+};
 
-        fun_layer {
-            label = "Fun";
-// -----------------------------------------------------------------------------------------
-// |  SHFT  |  F9  |  F6   |  F3  |  F12  |   |    |         |               |        |  Bootloader  |   |
-// |  CTRL  |  F8  |  F5   |  F2  |  F11  |   |    |  GUI    |      ALT      |  CTRL  |     SHFT     |   |
-// |  ALT   |  F7  |  F4   |  F1  |  F10  |   |    |  PSCRN  |  PAUSE_BREAK  |  SLCK  |              |   |
-//                         |      |       |   |    |         |
-            bindings = <
-   &kp LSHFT  &kp F7  &kp F8  &kp F9  &kp F12     &kp ESC  U_BTN1  U_BTN2  U_BTN3  &trans  
-   &kp LCTRL  &kp F4  &kp F5  &kp F6  &kp F11     U_MS_L   U_MS_D  U_MS_U  U_MS_R  &trans
-   &kp LALT   &kp F1  &kp F2  &kp F3  &kp F10     U_WH_L   U_WH_D  U_WH_U  U_WH_R  &trans
-                                 &trans  &trans   &trans   &trans
-            >;
+/ { 
+
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
         };
-        nav_layer {
-            label = "Nav";
-// -----------------------------------------------------------------------------------------
-// |  TAB |     |     |      |      |     |   | SDN | SDN | SCUP | SCUP |     |   |
-// | CTRL | GUI | ALT | CTRL | SHFT |     |   | LFT | DWN |  UP  | RGHT |     |   |
-// | SHFT |     |     |      |      |     |   | INS | HOM | PGUP | PGDN | END |   |
-//                    | ESC  | SPCE | TAB |   | RET | BSP | DEL |
-                                           bindings = <
-// &bootloader &trans &trans U_NA     U_NA    U_RDO       U_PST    U_CPY   U_CUT  U_UND
-   &trans    &trans          &trans           &trans     &trans     &zed_em_kay  &trans     &trans     &trans     &kp ESC
-   &kp LGUI  &kp LALT        &kp LCTRL        &kp LSHFT  &trans     &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT  &kp DEL
-   &trans    &hm LGUI PSCRN  &kp PAUSE_BREAK  &kp SLCK   &trans     &kp HOME     &kp PG_DN  &kp PG_UP  &kp END    &kp BSPC
-                                              &kp SPACE  &kp TAB    &kp RET      &kp BSPC
-            >;
+        
+         combo_tab {
+            timeout-ms = <50>;
+            key-positions = <10 11>;
+            bindings = <&kp TAB>;
         };
-        sym_layer {
-            label = "Sym";
-// -----------------------------------------------------------------------------------------
-// |  ,  |  /  |  *  |  -  |  +  |   |  ~  |  `  |  0  |  Ü  |  Ó  |
-// |  ^  |  &  |  *  |  (  |  )  |   |  =  |  <  |  >  | [Ő  | ]Ú  |
-// |  !  |  @  |  #  |  $  |  %  |   |  +  |  {  |  }  |  Ő  |  Ű  |
-//                    | ESC | SPC | TAB |   | RET | BSP | DEL |
-            bindings = <
-// &kp PIPE ==? altgr + W;  kp KP_SUBTRACT ==? &kp MINUS; &kp UNDER ==? SHIFT + MINUS; EXCL == Altgr + 4 == "!"       
-   &kp KP_COMMA     &kp KP_SLASH   &kp KP_ASTERISK        &kp KP_SUBTRACT  &kp KP_PLUS   &kp TILDE  &kp GRAVE      &kp N0        &kp MINUS      &kp EQUAL
-   &hm LGUI CARET   &hm LALT AMPS  &hm LCTRL KP_MULTIPLY  &hm LSHIFT LPAR  &kp RPAR      &kp EQUAL  &hm RSHIFT GT  &hm RCTRL LT  &hm RALT LBKT  &hm RGUI RBKT
-   &kp NON_US_BSLH  &kp AT         &kp HASH               &kp DLLR         &kp PRCNT     &kp PLUS   &kp LBRC       &kp RBRC      &kp QUOT       &kp BSLH
-                    	                                  &kp ESC          &kp TAB       &kp RET    &kp BSPC
-            >;
+        
+            combo_ralt {
+            timeout-ms = <50>;
+            key-positions = <17 16>;
+            bindings = <&kp RALT>;
         };
-        random_layer {
-            label = "Random";
-// -----------------------------------------------------------------------------------------
-// |  -  |  ,  | UNDO |  (  |     |   |     |     |     |     |     |
-// |  .  |     | BSPC | RET |     |   |     |     |     |     |     |
-// |     |     | DEL  |     |     |   |     |     |     |     |     |
-//                    |     |     |   |     |     |
-            bindings = <    
-   &kp FSLH  &kp COMMA                 &kp LC(Y)       &kp LS(N8)        &kp RA(F)   &trans  &trans  &trans  &trans  &trans
-   &kp DOT   &hm LALT LA(NON_US_BSLH)  &hm LCTRL BSPC  &hm LSHIFT ENTER  &kp RA(B)   &trans  &trans  &trans  &trans  &trans 
-   &trans    &kp LC(NON_US_BSLH)       &kp DEL         &kp DOWN          &kp UP      &trans  &trans  &trans  &trans  &trans
-                    	                               &trans            &trans      &trans  &trans
-            >;
+        
+                    combo_lalt {
+            timeout-ms = <50>;
+            key-positions = <11 12>;
+            bindings = <&kp LALT>;
         };
-        arrows {
-            label = "Arrows";
-// -----------------------------------------------------------------------------------------
-// |     |      |     |     |  P   |   |     |     |     |     |     |
-// |     |  LFT | UP  | DWN | RGHT |   |     |     |     |     |     |
-// |     |      |     |     |      |   |     |     |     |     |     |
-//                    |     |      |   |     |     |
-// LC(SHFT(P)) available. Ctrl moves.
-            bindings = <    
-   &kp LSHFT      &trans    &trans  &trans    &kp P       &trans  &trans  &trans  &trans  &trans
-   &kp LCTRL      &kp LEFT  &kp UP  &kp DOWN  &kp RIGHT   &trans  &trans  &trans  &trans  &trans 
-   &kp LC(LSHFT)  &trans    &trans  &trans    &trans      &trans  &trans  &trans  &trans  &trans
-                    	            &trans    &trans      &trans  &trans
-            >;
+        
+                           combo_lgui {
+            timeout-ms = <50>;
+            key-positions = <12 13>;
+            bindings = <&kp LGUI>;
         };
-        illumi_layer {
-            label = "Illuminati";
-// -----------------------------------------------------------------------------------------
-// |     |     |     |    |    |   |     |     |     |     |     |
-// |     |     |     |    |    |   |     |     |     |     |     |
-// |     |     |     |    |    |   |     |     |     |     |     |
-//                   |    |    |   |     |     |
-            bindings = <    
-   &trans  &trans     &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans
-   &trans  &kp LA(Z)  &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans 
-   &trans  &trans     &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans
-                    	              &trans   &trans  &trans  &trans
-            >;
+        
+        
+       combo_rgui {
+            timeout-ms = <50>;
+            key-positions = <17 18>;
+            bindings = <&kp RGUI>;
         };
+        
+
+        
     };
+
+        keymap {
+                compatible = "zmk,keymap";
+                
+       		default_layer {
+		bindings = <
+		&kp Q &kp W &kp E &kp R &kp T 						&kp Y &kp U  &kp I    &kp O   &kp P 
+		&kp A &kp S &kp D &kp F &kp G 			        	        &kp H &kp J &kp K &kp L &kp QUOT
+		&mt LSFT Z &kp X &kp C &kp V &kp B				        &kp N &kp M  &kp CMMA &kp DOT &mt LSFT RET
+          				&mo 1 &kp LCTL  				&kp SPC &mo 2 
+		>;
+		};
+
+       		left_layer {
+		bindings = <
+		&kp NUM_1  &kp NUM_2    &kp NUM_3    &kp NUM_4    &kp NUM_5		&kp NUM_6 &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp NUM_0 
+		&kp TAB    &kp LC(S)    &kp DQT      &kp PIPE2     &kp HASH 		&kp MINUS &kp EQL  &kp LBKT &kp RBKT  &kp DEL 
+		&kp ESC    &kp TILDE 	&kp NON_US_BSLH &kp NON_US_HASH  &kp TILDE2 	&kp MINUS &kp GRAVE &kp LBKT &kp RBKT  &kp DEL 
+					    &mo 1  &kp LGUI  					&kp RGUI &mo 2 
+		>;
+		};
+		
+		right_layer {
+		bindings = <
+		&kp BANG  &kp ATSN &kp HASH  &kp DLLR  &kp PRCT    			&kp CRRT  &kp AMPS &kp KMLT &kp LPRN &kp RPRN 
+		&kp HASH  &kp QMARK  &kp FSLH  &kp COLN  &kp SCLN 			&kp MINUS &kp KP_EQUAL  &kp LBRC  &kp RBRC   &kp BKSP
+		&kp LSFT  &kp KPLS &kp LBKT &kp RBKT   &kp BSLH    			&kp UNDER &kp LEFT &kp DOWN &kp UP  &kp RIGHT
+					  &mo 3 &kp LCTL  				&kp SPC  &mo 2 
+		>;
+		};	
+		
+		tri_layer {
+		bindings = <
+		&kp NUM_1  &kp NUM_2    &kp NUM_3    &kp NUM_4    &kp NUM_5 			&trans &trans   &trans   &trans  &trans
+		&kp F1 &kp F2 &kp F3 &kp F4 &kp F5  						&trans &kp PG_UP  &kp K_VOL_UP &kp K_MUTE &trans 
+		&bt BT_CLR  &bt BT_NXT &bt BT_PRV &kp F6 &kp F7   				&trans &kp PG_DN  &kp K_VOL_DN  &trans &trans   
+					 &trans &trans  					&trans &trans 
+		>;
+		};	
+        
+	};
 };
 
 
