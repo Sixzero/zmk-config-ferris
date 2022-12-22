@@ -25,6 +25,9 @@
 #define ARROWS 9
 #define ILLUMI 10
 
+&led_strip {
+    chain-length = <21>;
+};
 
 / {
     behaviors {
@@ -112,10 +115,6 @@
                 ;
         };
     };
-};
-
-/ {
-    
     keymap {
         compatible = "zmk,keymap";
         default_layer {
