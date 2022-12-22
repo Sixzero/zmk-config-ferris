@@ -91,7 +91,7 @@
             bindings = <
    &him LSHFT Q    &ltg SIMPLE W  &ltp ILLUMI E  &kp R            &kp T           &kp Y            &kp U          &kp I        &kp O         &kp P
    &hm LCTRL A     &hm LALT S     &hm LCTRL D    &him LSHFT F     &kp G           &kp H            &hm RSHFT J    &hm RCTRL K  &hm RALT L    &kp SEMI
-   &mt LSFT Z      &hm LGUI X     &kp C          &ltp ARROWS V    &ltp BUTTON B   &ltp BUTTON N    &kp M          &kp COMMA    &hm RGUI DOT  &kp FSLH
+   &ltp RANDOM Z   &hm LGUI X     &kp C          &ltp ARROWS V    &ltp BUTTON B   &ltp BUTTON N    &kp M          &kp COMMA    &hm RGUI DOT  &kp FSLH
                                                  &ltp NUM SPACE   &ltp FUN TAB    &ltp NAV ENTER   &ltp SYM BSPC
             >;
         };
@@ -228,12 +228,11 @@
 // |     |     |     |    |    |   |     |     |     |     |     |
 //                   |    |    |   |     |     |
             bindings = <    
-   &trans  &trans     &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans
-   &trans  &kp LA(Z)  &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans 
-   &trans  &trans     &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans
-                    	              &trans   &trans  &trans  &trans
+   &trans  &trans     &trans  &bl BL_ON      &bl BL_INC      &trans  &trans  &trans  &trans  &trans
+   &trans  &kp LA(Z)  &trans  &bl BL_OFF     &bl BL_DEC      &trans  &trans  &trans  &trans  &trans 
+   &trans  &trans     &trans  &bl BL_SET 50  &bl BL_SET 20   &trans  &trans  &trans  &trans  &trans
+                    	      &trans   &trans  &trans  &trans
             >;
         };
     };
 };
-
