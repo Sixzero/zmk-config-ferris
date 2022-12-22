@@ -10,15 +10,16 @@ manifest:
       url-base: https://github.com/nickconway
     - name: sixzero
       url-base: https://github.com/Sixzero
-  # projects:
-  #   - name: zmk
-  #     remote: sixzero
-  #     revision: dev_six
-  #     import: app/west.yml
   projects:
     - name: zmk
-      remote: nickconway
+      remote: sixzero
       revision: dev
+  #     revision: dev_six
       import: app/west.yml
+  # projects:
+  #   - name: zmk
+  #     remote: nickconway
+  #     revision: dev
+  #     import: app/west.yml
   self:
     path: config
