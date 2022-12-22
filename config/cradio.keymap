@@ -25,10 +25,6 @@
 #define ARROWS 9
 #define ILLUMI 10
 
-&led_strip {
-    chain-length = <21>;
-};
-
 / {
     behaviors {
         hm: homerow_mods {
